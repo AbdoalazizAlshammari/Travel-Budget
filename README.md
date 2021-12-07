@@ -17,6 +17,7 @@ the project aim to create a trevel app that help customer find the best budget w
 - contries screen
 - places in contries and quick view of famous places screen
 -  Image of hotel or place and description scrren 
+-  Profile Screen
 
 
 
