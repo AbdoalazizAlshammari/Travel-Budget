@@ -30,6 +30,6 @@ the project aim to create a trevel app that help customer find the best budget w
 
 
 ### User Stories :
-As a customer; I want the coustomer to be able to find the best budgets for a good qulity of treveling, I want my customer to login or sginup so that they can be able to view trevlling deals.  
+As a customer; I want the coustomer to be able to find the best budgets for a good qulity of treveling, I want my customer to login or sginup so that they can be able to view trevlling deals for a good budgets.  
 
 
