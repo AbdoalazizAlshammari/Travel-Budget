@@ -1,4 +1,4 @@
-# Travel-Budget-App-
+# Travel-Budget
 
 # CapStone
 
