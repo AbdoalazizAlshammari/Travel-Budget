@@ -7,23 +7,35 @@
 
 import UIKit
 import FirebaseFirestore
+import SwiftUI
 
-class ViewControllerBookings:
+class CountriesVC:
     UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
     
     var countries = [Countries]()
     var selctedId : String?
+    var casees :Int?
+    
+ //   var selctedcase : Countries?
+//    var setselctedcase : Countries?
     
     @IBOutlet weak var CollectionCountries: UICollectionView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        CountriesApi.duplicateCountries()
+        
         CountriesApi.getCountries { countries in
             DispatchQueue.main.async {
-                self.countries.append(countries)
-                self.CollectionCountries.reloadData()
+               
+                if self.casees == countries.selctedCase {
+                    self.countries.append(countries)
+                    self.CollectionCountries.reloadData()
+                }
+             
+               
             }
         }
         

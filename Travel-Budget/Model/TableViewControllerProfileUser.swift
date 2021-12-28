@@ -9,9 +9,9 @@ import UIKit
 import FirebaseAuth
 class TableViewControllerProfileUser: UITableViewController {
 
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
-    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var email: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

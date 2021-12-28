@@ -12,6 +12,7 @@ class Countries {
     var imageCountry: String?
     var nameCountry :String?
     var id: String?
+    var selctedCase :Int?
     
   //  var Cities: [String: Any]?
   //  var places: [String: Any]?
@@ -27,6 +28,7 @@ extension Countries {
         
         countrie.imageCountry = dict["imageCountry"] as? String
         countrie.nameCountry = dict["nameCountry"] as? String
+        countrie.selctedCase = dict["selctedCase"] as? Int
         countrie.id = dict["id"] as? String
         
         return countrie

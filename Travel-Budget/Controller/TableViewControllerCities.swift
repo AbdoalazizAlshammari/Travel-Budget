@@ -19,6 +19,7 @@ class TableViewControllerCities: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setSelctedId = selctedId
+        
         guard let setSelctedId = setSelctedId else { return }
         CitiysApi.getCitys(idCountry: setSelctedId) { citys in
             DispatchQueue.main.async {
@@ -38,6 +39,7 @@ class TableViewControllerCities: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCellCities
+        
         guard let url = URL(string: citys[indexPath.row].imageCity ?? "" )else { return UITableViewCell() }
         
         if let data = try? Data(contentsOf: url) {

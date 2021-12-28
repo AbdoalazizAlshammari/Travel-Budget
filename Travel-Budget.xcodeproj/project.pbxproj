@@ -23,7 +23,7 @@
 		046383C0275F81B600711E99 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 046383BF275F81B600711E99 /* FirebaseStorage */; };
 		046383C5275F8A4000711E99 /* SginInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383C4275F8A4000711E99 /* SginInVC.swift */; };
 		046383C7275F9BFC00711E99 /* SginUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383C6275F9BFC00711E99 /* SginUpVC.swift */; };
-		046383C92760C37900711E99 /* ViewControllerBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383C82760C37900711E99 /* ViewControllerBookings.swift */; };
+		046383C92760C37900711E99 /* CountriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383C82760C37900711E99 /* CountriesVC.swift */; };
 		046383CB2760C42F00711E99 /* CollectionViewCellCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383CA2760C42F00711E99 /* CollectionViewCellCountries.swift */; };
 		046383CD2760EE3400711E99 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383CC2760EE3400711E99 /* CollectionViewCell.swift */; };
 		046383D1276220C400711E99 /* TableViewControllerCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383D0276220C300711E99 /* TableViewControllerCities.swift */; };
@@ -52,7 +52,7 @@
 		046383B6275F7FEB00711E99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		046383C4275F8A4000711E99 /* SginInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SginInVC.swift; sourceTree = "<group>"; };
 		046383C6275F9BFC00711E99 /* SginUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SginUpVC.swift; sourceTree = "<group>"; };
-		046383C82760C37900711E99 /* ViewControllerBookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBookings.swift; sourceTree = "<group>"; };
+		046383C82760C37900711E99 /* CountriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesVC.swift; sourceTree = "<group>"; };
 		046383CA2760C42F00711E99 /* CollectionViewCellCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCountries.swift; sourceTree = "<group>"; };
 		046383CC2760EE3400711E99 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		046383D0276220C300711E99 /* TableViewControllerCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerCities.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				044BDE05276B79B700119E5F /* SginUp */,
 				044BDE04276B798F00119E5F /* Login */,
 				046383A6275F78DB00711E99 /* SelectedBudgetVC.swift */,
-				046383C82760C37900711E99 /* ViewControllerBookings.swift */,
+				046383C82760C37900711E99 /* CountriesVC.swift */,
 				046383D0276220C300711E99 /* TableViewControllerCities.swift */,
 				044BDDFF276B746900119E5F /* PlacesAndInfoForcity.swift */,
 			);
@@ -267,7 +267,7 @@
 				046383D32762211E00711E99 /* TableViewCellCities.swift in Sources */,
 				0470500027673002003E028B /* CountriesApi.swift in Sources */,
 				044BDE07276F0DDD00119E5F /* PlacesApi.swift in Sources */,
-				046383C92760C37900711E99 /* ViewControllerBookings.swift in Sources */,
+				046383C92760C37900711E99 /* CountriesVC.swift in Sources */,
 				04705002276A0654003E028B /* TableViewControllerProfileUser.swift in Sources */,
 				04704FFE27672F4A003E028B /* Places.swift in Sources */,
 			);

@@ -15,8 +15,13 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
     var selctedCity : Cities?
     var setSelctedCity : Cities?
     
+    
+    
     var idCountries:String?
     var setIdCountries : String?
+    
+    var timer : Timer?
+
     
     @IBOutlet weak var CollectionPlaces: UICollectionView!
     @IBOutlet weak var CityDescription: UILabel!
@@ -25,6 +30,11 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(anim), userInfo: nil, repeats: true)
+        
+        
+        
         setIdCountries = idCountries
         setSelctedCity = selctedCity
         CityDescription.text = setSelctedCity?.name
@@ -43,12 +53,12 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
         })
         CollectionPlaces.delegate = self
         CollectionPlaces.dataSource = self
-        
+       
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return places?.names?.count ?? 0
+        return places?.images?.count ?? 0
     }
     
     
@@ -80,16 +90,23 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
         
         
     }
-//    func cityNames(){
-//
-//        var city = CityDescription.text
-//        city?.append(Cities.getDataFromCities(dict: "").name ?? "")
-//
-//
-//
-//    }
-//
-//
+    @objc func anim (){
+    
+        let lastItem = CollectionPlaces.indexPathsForVisibleItems.last
+        let currentItem = IndexPath(item: lastItem!.item, section: 0)
+        CollectionPlaces.scrollToItem(at: currentItem, at: .right, animated: true)
+        var nextItem = currentItem.item + 1
+        
+        if nextItem == places?.images?.count
+        {
+            
+            nextItem = 0
+        }
+        let nextIndexPath = IndexPath(item: nextItem, section: 0)
+        CollectionPlaces.scrollToItem(at: nextIndexPath, at: .right, animated: true)
+    }
+    
+
 }
 
 
