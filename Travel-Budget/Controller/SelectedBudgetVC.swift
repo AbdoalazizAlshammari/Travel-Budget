@@ -41,13 +41,13 @@ class SelectedBudgetVC: UIViewController {
         case 5000...10000:
             casee = 0
         case 10000...25000:
-            casee = 2
+            casee = 1
         case 25000...50000:
-            casee = 3
+            casee = 2
         case 50000...75000:
-            casee = 4
+            casee = 3
         case 75000...100000:
-            casee = 5
+            casee = 4
         default:
             print("")
         }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04089CA0277DA9970075B9A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04089C9F277DA9970075B9A7 /* FirebaseAuth */; };
+		04089CA3277DAB0D0075B9A7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 04089CA2277DAB0D0075B9A7 /* SwiftyJSON */; };
+		04089CA6277DABC10075B9A7 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 04089CA5277DABC10075B9A7 /* NVActivityIndicatorView */; };
+		04089CA8277DABC10075B9A7 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 04089CA7277DABC10075B9A7 /* NVActivityIndicatorViewExtended */; };
 		044BDE00276B746900119E5F /* PlacesAndInfoForcity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BDDFF276B746900119E5F /* PlacesAndInfoForcity.swift */; };
 		044BDE02276B786E00119E5F /* CitiysApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BDE01276B786E00119E5F /* CitiysApi.swift */; };
 		044BDE07276F0DDD00119E5F /* PlacesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BDE06276F0DDC00119E5F /* PlacesApi.swift */; };
@@ -17,10 +21,6 @@
 		046383AC275F78DF00711E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046383AB275F78DF00711E99 /* Assets.xcassets */; };
 		046383AF275F78DF00711E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046383AD275F78DF00711E99 /* LaunchScreen.storyboard */; };
 		046383B7275F7FEB00711E99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046383B6275F7FEB00711E99 /* GoogleService-Info.plist */; };
-		046383BA275F81B600711E99 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 046383B9275F81B600711E99 /* FirebaseAnalytics */; };
-		046383BC275F81B600711E99 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 046383BB275F81B600711E99 /* FirebaseAuth */; };
-		046383BE275F81B600711E99 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 046383BD275F81B600711E99 /* FirebaseFirestore */; };
-		046383C0275F81B600711E99 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 046383BF275F81B600711E99 /* FirebaseStorage */; };
 		046383C5275F8A4000711E99 /* SginInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383C4275F8A4000711E99 /* SginInVC.swift */; };
 		046383C7275F9BFC00711E99 /* SginUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383C6275F9BFC00711E99 /* SginUpVC.swift */; };
 		046383C92760C37900711E99 /* CountriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046383C82760C37900711E99 /* CountriesVC.swift */; };
@@ -35,6 +35,13 @@
 		04704FFE27672F4A003E028B /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04704FFD27672F4A003E028B /* Places.swift */; };
 		0470500027673002003E028B /* CountriesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04704FFF27673002003E028B /* CountriesApi.swift */; };
 		04705002276A0654003E028B /* TableViewControllerProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04705001276A0654003E028B /* TableViewControllerProfileUser.swift */; };
+		0486A572277D9FB200A3332C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0486A571277D9FB200A3332C /* Alamofire */; };
+		0486A575277DA05600A3332C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0486A574277DA05600A3332C /* FirebaseAnalytics */; };
+		0486A577277DA05600A3332C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0486A576277DA05600A3332C /* FirebaseFirestore */; };
+		0486A579277DA05600A3332C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0486A578277DA05600A3332C /* FirebaseStorage */; };
+		04D73EC1277C547C0038B70B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D73EC0277C547C0038B70B /* Weather.swift */; };
+		04D73EC3277C54A50038B70B /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D73EC2277C54A50038B70B /* WeatherApi.swift */; };
+		04D73EC8277D95B40038B70B /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D73EC7277D95B40038B70B /* WeatherVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +71,9 @@
 		04704FFD27672F4A003E028B /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		04704FFF27673002003E028B /* CountriesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesApi.swift; sourceTree = "<group>"; };
 		04705001276A0654003E028B /* TableViewControllerProfileUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerProfileUser.swift; sourceTree = "<group>"; };
+		04D73EC0277C547C0038B70B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		04D73EC2277C54A50038B70B /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
+		04D73EC7277D95B40038B70B /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,16 +81,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046383BA275F81B600711E99 /* FirebaseAnalytics in Frameworks */,
-				046383C0275F81B600711E99 /* FirebaseStorage in Frameworks */,
-				046383BC275F81B600711E99 /* FirebaseAuth in Frameworks */,
-				046383BE275F81B600711E99 /* FirebaseFirestore in Frameworks */,
+				04089CA3277DAB0D0075B9A7 /* SwiftyJSON in Frameworks */,
+				04089CA8277DABC10075B9A7 /* NVActivityIndicatorViewExtended in Frameworks */,
+				0486A575277DA05600A3332C /* FirebaseAnalytics in Frameworks */,
+				04089CA6277DABC10075B9A7 /* NVActivityIndicatorView in Frameworks */,
+				04089CA0277DA9970075B9A7 /* FirebaseAuth in Frameworks */,
+				0486A579277DA05600A3332C /* FirebaseStorage in Frameworks */,
+				0486A572277D9FB200A3332C /* Alamofire in Frameworks */,
+				0486A577277DA05600A3332C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04089C9E277DA9970075B9A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		044BDE03276B796500119E5F /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +109,7 @@
 				04704FFF27673002003E028B /* CountriesApi.swift */,
 				044BDE01276B786E00119E5F /* CitiysApi.swift */,
 				044BDE06276F0DDC00119E5F /* PlacesApi.swift */,
+				04D73EC2277C54A50038B70B /* WeatherApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -113,6 +135,7 @@
 			children = (
 				046383A1275F78DB00711E99 /* Travel-Budget */,
 				046383A0275F78DB00711E99 /* Products */,
+				04089C9E277DA9970075B9A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +172,7 @@
 				04704FFD27672F4A003E028B /* Places.swift */,
 				04704FFB27672ED5003E028B /* Cities.swift */,
 				04705001276A0654003E028B /* TableViewControllerProfileUser.swift */,
+				04D73EC0277C547C0038B70B /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +189,7 @@
 				046383C82760C37900711E99 /* CountriesVC.swift */,
 				046383D0276220C300711E99 /* TableViewControllerCities.swift */,
 				044BDDFF276B746900119E5F /* PlacesAndInfoForcity.swift */,
+				04D73EC7277D95B40038B70B /* WeatherVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,10 +211,14 @@
 			);
 			name = "Travel-Budget";
 			packageProductDependencies = (
-				046383B9275F81B600711E99 /* FirebaseAnalytics */,
-				046383BB275F81B600711E99 /* FirebaseAuth */,
-				046383BD275F81B600711E99 /* FirebaseFirestore */,
-				046383BF275F81B600711E99 /* FirebaseStorage */,
+				0486A571277D9FB200A3332C /* Alamofire */,
+				0486A574277DA05600A3332C /* FirebaseAnalytics */,
+				0486A576277DA05600A3332C /* FirebaseFirestore */,
+				0486A578277DA05600A3332C /* FirebaseStorage */,
+				04089C9F277DA9970075B9A7 /* FirebaseAuth */,
+				04089CA2277DAB0D0075B9A7 /* SwiftyJSON */,
+				04089CA5277DABC10075B9A7 /* NVActivityIndicatorView */,
+				04089CA7277DABC10075B9A7 /* NVActivityIndicatorViewExtended */,
 			);
 			productName = "Travel-Budget";
 			productReference = 0463839F275F78DB00711E99 /* Travel-Budget.app */;
@@ -220,7 +249,10 @@
 			);
 			mainGroup = 04638396275F78DB00711E99;
 			packageReferences = (
-				046383B8275F81B600711E99 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0486A570277D9FB200A3332C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0486A573277DA05600A3332C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				04089CA1277DAB0D0075B9A7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				04089CA4277DABC10075B9A7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = 046383A0275F78DB00711E99 /* Products */;
 			projectDirPath = "";
@@ -255,6 +287,7 @@
 				046383A7275F78DB00711E99 /* SelectedBudgetVC.swift in Sources */,
 				046383A3275F78DB00711E99 /* AppDelegate.swift in Sources */,
 				04704FFA27662E3B003E028B /* Countrie.swift in Sources */,
+				04D73EC8277D95B40038B70B /* WeatherVC.swift in Sources */,
 				046383CD2760EE3400711E99 /* CollectionViewCell.swift in Sources */,
 				046383A5275F78DB00711E99 /* SceneDelegate.swift in Sources */,
 				04704FFC27672ED5003E028B /* Cities.swift in Sources */,
@@ -263,6 +296,8 @@
 				046383C5275F8A4000711E99 /* SginInVC.swift in Sources */,
 				044BDE00276B746900119E5F /* PlacesAndInfoForcity.swift in Sources */,
 				046383C7275F9BFC00711E99 /* SginUpVC.swift in Sources */,
+				04D73EC1277C547C0038B70B /* Weather.swift in Sources */,
+				04D73EC3277C54A50038B70B /* WeatherApi.swift in Sources */,
 				046383CB2760C42F00711E99 /* CollectionViewCellCountries.swift in Sources */,
 				046383D32762211E00711E99 /* TableViewCellCities.swift in Sources */,
 				0470500027673002003E028B /* CountriesApi.swift in Sources */,
@@ -491,7 +526,31 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		046383B8275F81B600711E99 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		04089CA1277DAB0D0075B9A7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		04089CA4277DABC10075B9A7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		0486A570277D9FB200A3332C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		0486A573277DA05600A3332C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -502,24 +561,44 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		046383B9275F81B600711E99 /* FirebaseAnalytics */ = {
+		04089C9F277DA9970075B9A7 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 046383B8275F81B600711E99 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		046383BB275F81B600711E99 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 046383B8275F81B600711E99 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 0486A573277DA05600A3332C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		046383BD275F81B600711E99 /* FirebaseFirestore */ = {
+		04089CA2277DAB0D0075B9A7 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 046383B8275F81B600711E99 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 04089CA1277DAB0D0075B9A7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		04089CA5277DABC10075B9A7 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04089CA4277DABC10075B9A7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		04089CA7277DABC10075B9A7 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04089CA4277DABC10075B9A7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+		0486A571277D9FB200A3332C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0486A570277D9FB200A3332C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0486A574277DA05600A3332C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0486A573277DA05600A3332C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		0486A576277DA05600A3332C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0486A573277DA05600A3332C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		046383BF275F81B600711E99 /* FirebaseStorage */ = {
+		0486A578277DA05600A3332C /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 046383B8275F81B600711E99 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 0486A573277DA05600A3332C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
