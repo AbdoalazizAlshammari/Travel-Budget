@@ -82,10 +82,11 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
         return 0
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "cell" {
+        if segue.identifier == "goWeather" {
             
-            let vc = segue.destination as! CollectionViewCell
-            // vc.selctedCity = selctedCity
+            let vc = segue.destination as! WeatherVC
+            vc.lon  = setSelctedCity?.lon ?? 0.0
+            vc.lat = setSelctedCity?.lat ?? 0.0
         }
         
         
@@ -107,6 +108,9 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
     }
     
 
+    @IBAction func goToWeather(_ sender: Any) {
+        performSegue(withIdentifier: "goWeather", sender: nil)
+    }
 }
 
 

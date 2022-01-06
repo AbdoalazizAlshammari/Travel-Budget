@@ -11,6 +11,7 @@
 		04089CA3277DAB0D0075B9A7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 04089CA2277DAB0D0075B9A7 /* SwiftyJSON */; };
 		04089CA6277DABC10075B9A7 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 04089CA5277DABC10075B9A7 /* NVActivityIndicatorView */; };
 		04089CA8277DABC10075B9A7 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 04089CA7277DABC10075B9A7 /* NVActivityIndicatorViewExtended */; };
+		0413DB5C27857F230017B4D7 /* TableViewControllerFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413DB5B27857F230017B4D7 /* TableViewControllerFavorite.swift */; };
 		044BDE00276B746900119E5F /* PlacesAndInfoForcity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BDDFF276B746900119E5F /* PlacesAndInfoForcity.swift */; };
 		044BDE02276B786E00119E5F /* CitiysApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BDE01276B786E00119E5F /* CitiysApi.swift */; };
 		044BDE07276F0DDD00119E5F /* PlacesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BDE06276F0DDC00119E5F /* PlacesApi.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0413DB5B27857F230017B4D7 /* TableViewControllerFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerFavorite.swift; sourceTree = "<group>"; };
 		044BDDFF276B746900119E5F /* PlacesAndInfoForcity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAndInfoForcity.swift; sourceTree = "<group>"; };
 		044BDE01276B786E00119E5F /* CitiysApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiysApi.swift; sourceTree = "<group>"; };
 		044BDE06276F0DDC00119E5F /* PlacesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApi.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				046383D0276220C300711E99 /* TableViewControllerCities.swift */,
 				044BDDFF276B746900119E5F /* PlacesAndInfoForcity.swift */,
 				04D73EC7277D95B40038B70B /* WeatherVC.swift */,
+				0413DB5B27857F230017B4D7 /* TableViewControllerFavorite.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046383D52762287200711E99 /* User.swift in Sources */,
+				0413DB5C27857F230017B4D7 /* TableViewControllerFavorite.swift in Sources */,
 				044BDE02276B786E00119E5F /* CitiysApi.swift in Sources */,
 				046383A7275F78DB00711E99 /* SelectedBudgetVC.swift in Sources */,
 				046383A3275F78DB00711E99 /* AppDelegate.swift in Sources */,

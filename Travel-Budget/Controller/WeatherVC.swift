@@ -51,6 +51,8 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
         }
         
+        setLocation()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,12 +60,21 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+       
+    }
+    
+    func setLocation(){
         
-        let location = locations[0]
-        lat = location.coordinate.latitude
-        lon = location.coordinate.longitude 
+//        let location = locations[0]
+//        lat = location.coordinate.latitude
+//        lon = location.coordinate.longitude
+        
+        
+        print(lat)
+        print(lon)
         AF.request("http://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&appid=\(apiKey)&units=metric").responseJSON {
             response in
+            print(response)
             self.activityIndicator.stopAnimating()
             if let responseStr = response.value {
                 let jsonResponse = JSON(responseStr)

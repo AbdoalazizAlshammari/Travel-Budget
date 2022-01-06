@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
-import SwiftUI
+
 
 class CountriesVC:
     UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
@@ -17,7 +17,7 @@ class CountriesVC:
     var selctedId : String?
     var casees :Int?
     
- //   var selctedcase : Countries?
+//    var selctedcase : Countries?
 //    var setselctedcase : Countries?
     
     @IBOutlet weak var CollectionCountries: UICollectionView!
@@ -59,6 +59,7 @@ class CountriesVC:
         }
         cell.countryName.text = countries[indexPath.row].nameCountry
         
+        cell.favrite = countries[indexPath.row].id ?? ""
         
         return cell
     }

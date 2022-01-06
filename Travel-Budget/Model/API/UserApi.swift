@@ -11,18 +11,18 @@ import FirebaseFirestore
 
 class UserApi {
     
-    static func addUser(name:String,uid:String,phone:String,email:String,completion: @escaping (Bool) -> Void) {
+    static func addUser(name:String,uid:String,phone:String,email:String,favorite:[String],completion: @escaping (Bool) -> Void) {
         
         let refUsers = Firestore.firestore().collection("Users")
         
         
-        refUsers.document(uid).setData(User.CreateUser(name: name, phone: phone, email: email))
+        refUsers.document(uid).setData(User.CreateUser(name: name, phone: phone, email: email,favorite: favorite))
         
         completion(true)
         
     }
     static func getUser(uid:String,completion: @escaping (User) -> Void) {
-       
+        
         let refUsers = Firestore.firestore().collection("Users")
         
         refUsers.document(uid).getDocument { document, error in
@@ -31,6 +31,18 @@ class UserApi {
                 completion(user)
             }
         }
-        
     }
+    
+    static func addFavorite(uid:String,favorite:String) {
+        
+        let refCountries = Firestore.firestore().collection("Countries")
+        let refFavorite = Firestore.firestore().collection("Favorite")
+        
+        refCountries.document(favorite).getDocument { document, error in
+            if let document = document, document.exists {
+                refFavorite.document(uid).collection("AllFA").document().setData(document.data()!)
+            }
+        }
+    }
+    
 }

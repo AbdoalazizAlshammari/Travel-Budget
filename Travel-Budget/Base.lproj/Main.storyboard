@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Kg-vh-9ew">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Kg-vh-9ew">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -327,7 +328,7 @@
                     <navigationItem key="navigationItem" id="74Q-bX-Lgl">
                         <barButtonItem key="rightBarButtonItem" title="Check Weather" id="agh-av-oHL">
                             <connections>
-                                <segue destination="BGx-dc-6ld" kind="show" id="pR8-Kp-WW7"/>
+                                <action selector="goToWeather:" destination="UhL-Fi-ue5" id="iv3-Po-2bF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -336,6 +337,7 @@
                         <outlet property="CollectionPlaces" destination="elh-9Y-gbd" id="8zR-G2-vFn"/>
                         <outlet property="imageDescription" destination="u8K-rt-NkU" id="26t-Oj-Dzd"/>
                         <outlet property="textDescription" destination="yQi-HY-t8I" id="efS-Tg-E87"/>
+                        <segue destination="BGx-dc-6ld" kind="show" identifier="goWeather" id="fUg-B2-rG5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVd-4h-yiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -456,16 +458,16 @@
             </objects>
             <point key="canvasLocation" x="2667" y="96"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller Favorite-->
         <scene sceneID="0uo-LO-bk9">
             <objects>
-                <tableViewController id="0MJ-RO-yPm" sceneMemberID="viewController">
+                <tableViewController id="0MJ-RO-yPm" customClass="TableViewControllerFavorite" customModule="Travel_Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CVc-y1-89n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="SPk-2t-q7f">
+                            <tableViewCell clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GotoFav" rowHeight="160" id="SPk-2t-q7f">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SPk-2t-q7f" id="fI4-52-Ddv">
@@ -647,14 +649,40 @@
                                                     <color key="textColor" red="0.93230977680000005" green="0.93230977680000005" blue="0.93230977680000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleAspectFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWt-ow-KZm">
+                                                    <rect key="frame" x="121" y="126" width="26" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="26" id="5Cv-YV-sbI"/>
+                                                        <constraint firstAttribute="height" constant="21" id="WHD-90-C26"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" imagePadding="0.0" cornerStyle="capsule">
+                                                        <imageReference key="image" image="heart" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                                            <hierarchicalColors>
+                                                                <color white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color systemColor="secondaryLabelColor"/>
+                                                                <color systemColor="tertiaryLabelColor"/>
+                                                            </hierarchicalColors>
+                                                        </imageReference>
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </backgroundConfiguration>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="addFavorite:" destination="w42-v4-VaJ" eventType="touchUpInside" id="yaj-EB-qTu"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="zh4-pw-DdM" secondAttribute="trailing" id="Cbf-Mk-ica"/>
                                                 <constraint firstItem="GrJ-5E-2ak" firstAttribute="centerY" secondItem="BJk-Yh-Zwq" secondAttribute="centerY" id="GGe-KV-oa1"/>
+                                                <constraint firstAttribute="trailing" secondItem="sWt-ow-KZm" secondAttribute="trailing" constant="3" id="SCa-8N-r9J"/>
                                                 <constraint firstItem="zh4-pw-DdM" firstAttribute="leading" secondItem="BJk-Yh-Zwq" secondAttribute="leading" id="adf-bD-zom"/>
                                                 <constraint firstAttribute="trailing" secondItem="GrJ-5E-2ak" secondAttribute="trailing" constant="12" id="hV2-Br-EFS"/>
                                                 <constraint firstItem="GrJ-5E-2ak" firstAttribute="leading" secondItem="BJk-Yh-Zwq" secondAttribute="leading" constant="12" id="i9U-Vc-b7e"/>
                                                 <constraint firstItem="zh4-pw-DdM" firstAttribute="top" secondItem="BJk-Yh-Zwq" secondAttribute="top" id="pHV-Bd-fhr"/>
+                                                <constraint firstAttribute="bottom" secondItem="sWt-ow-KZm" secondAttribute="bottom" constant="3" id="vQy-ya-Gia"/>
                                                 <constraint firstAttribute="bottom" secondItem="zh4-pw-DdM" secondAttribute="bottom" id="vUE-uV-xbq"/>
                                                 <constraint firstItem="GrJ-5E-2ak" firstAttribute="centerX" secondItem="BJk-Yh-Zwq" secondAttribute="centerX" id="yQ3-M7-uHL"/>
                                             </constraints>
@@ -685,7 +713,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf9-kG-Scu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5394" y="82"/>
+            <point key="canvasLocation" x="5392.753623188406" y="81.696428571428569"/>
         </scene>
         <!--List of Cities-->
         <scene sceneID="f61-Xs-Jg1">
@@ -902,6 +930,9 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

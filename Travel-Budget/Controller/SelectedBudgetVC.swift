@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 
 class SelectedBudgetVC: UIViewController {
    
@@ -17,9 +17,6 @@ class SelectedBudgetVC: UIViewController {
     
     var selctedcase : Countries?
     
-    
-
-    
     @IBOutlet weak var sliderValue: UISlider!
     @IBOutlet weak var label: UILabel!
    
@@ -27,6 +24,19 @@ class SelectedBudgetVC: UIViewController {
         super.viewDidLoad()
         let currentval = Int(sliderValue.value)
         label.text = "\(currentval)"
+    }
+    func DisplayAlert(withTitle title: String, message: String,isFound: Bool) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okFound = UIAlertAction(title:NSLocalizedString("Ok", comment: ""), style: .default, handler: { action in
+            if isFound {
+                self.performSegue(withIdentifier: "ToCountries", sender: nil)
+            } else {
+                
+            }
+            
+        })
+        alert.addAction(okFound)
+        self.present(alert, animated: true)
     }
     @IBAction func SliderDidSlide(_ sender: UISlider) {
         
@@ -49,8 +59,11 @@ class SelectedBudgetVC: UIViewController {
         case 75000...100000:
             casee = 4
         default:
-            print("")
+  
+            DisplayAlert(withTitle: NSLocalizedString(" No trip Found", comment: ""), message: "", isFound: false)
+            
         }
+        
         performSegue(withIdentifier: "ToCountries", sender: nil)
         
         

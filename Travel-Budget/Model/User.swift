@@ -12,7 +12,7 @@ class User {
     var name:String?
     var phone: String?
     var email: String?
-    
+    var favorite :[String]?
 }
 
 extension User {
@@ -24,18 +24,27 @@ extension User {
         user.phone = dict["name"] as? String
         user.name = dict["phone"] as? String
         user.email = dict["email"] as? String
-       
+        user.favorite = dict["favorite"] as? [String]
         return user
     }
-    static func CreateUser(name:String,phone:String,email:String) -> [String: Any] {
+    static func CreateUser(name:String,phone:String,email:String,favorite:[String]) -> [String: Any] {
        
         let newUser = ["name":phone,
                        "phone":name,
                        "email" :email,
+                       "favorite" :favorite,
                     ] as [String : Any]
         
         return newUser
     }
- 
+    static func addFavorite(favorite:[String]) -> [String: Any] {
+       
+        let User = [
+                       "favorite" :[favorite],
+                    ] as [String : Any]
+        
+        return User
+    }
+    
 }
 

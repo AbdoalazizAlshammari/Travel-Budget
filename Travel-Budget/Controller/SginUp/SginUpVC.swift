@@ -31,7 +31,7 @@ class SginUpVC: UIViewController {
             print("email:\(String(describing: authResult?.user.email))")
             print("uid:\(String(describing: authResult?.user.uid))")
             
-            UserApi.addUser(name: name, uid: authResult?.user.uid ?? "", phone: phone, email: email) { check in
+            UserApi.addUser(name: name, uid: authResult?.user.uid ?? "", phone: phone, email: email, favorite: ["favorite"]) { check in
               
                 if check {
 //                    self.showAlert(DisplayAlert(withTitle: "thnak you for Signing up", message: "welcome", isSginup: true))

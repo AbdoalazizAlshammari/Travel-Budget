@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import FirebaseFirestore
+import FirebaseAuth
 class CollectionViewCellCountries:UICollectionViewCell {
     
     
@@ -17,6 +18,8 @@ class CollectionViewCellCountries:UICollectionViewCell {
     @IBOutlet weak var countryImage: UIImageView!
     @IBOutlet weak var countryName: UILabel!
 
+    
+    var favrite : String = ""
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -27,6 +30,15 @@ class CollectionViewCellCountries:UICollectionViewCell {
 //        // Configure the view for the selected state
 //    }
 
+    @IBAction func addFavorite(_ sender: Any) {
+        let uid = Auth.auth().currentUser?.uid ?? ""
+        UserApi.getUser(uid: uid) { user in
+            
+            UserApi.addFavorite(uid:uid , favorite: self.favrite)
+            
+        }
+      
+    }
+
+
 }
-
-
