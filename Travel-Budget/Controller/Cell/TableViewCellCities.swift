@@ -7,14 +7,13 @@
 
 import UIKit
 
+// cell for cities image and label outlets
+
 class TableViewCellCities: UITableViewCell {
 
-//    
-//
-//    var imegeCitiesCell = UIImage(named: "")
-//    var labalTextCitiesCell = ""
     @IBOutlet weak var imageCities: UIImageView!
     @IBOutlet weak var nameCities: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +22,6 @@ class TableViewCellCities: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }

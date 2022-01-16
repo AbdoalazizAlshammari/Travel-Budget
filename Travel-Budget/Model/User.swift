@@ -13,6 +13,7 @@ class User {
     var phone: String?
     var email: String?
     var favorite :[String]?
+    
 }
 
 extension User {
@@ -45,6 +46,15 @@ extension User {
         
         return User
     }
+    
+    static func getFavorite(dict: [String: Any]) -> User {
+       
+        let user = User()
+        
+        user.favorite = dict["favorite"] as? [String]
+        return user
+    }
+    
     
 }
 

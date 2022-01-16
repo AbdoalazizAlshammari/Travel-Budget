@@ -66,14 +66,15 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellco", for: indexPath) as! CollectionViewCell
         
         guard let url = URL(string: (places?.images?[indexPath.row])!) else { return UICollectionViewCell() }
-        if let data = try? Data(contentsOf: url) {
-            cell.imagesCollectionPlaces.image = UIImage(data: data)
-        }
+//        if let data = try? Data(contentsOf: url) {
+//            cell.imagesCollectionPlaces.image = UIImage(data: data)
+//        }
+        cell.imagesCollectionPlaces.kf.setImage(with: url, options: [.cacheOriginalImage])
 
         cell.namesCollectionPlaces.text = places?.names?[indexPath.row]
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) -> Int {
+    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) -> Int {
         
         //           selctedId = places[indexPath.row].id
 //        performSegue(withIdentifier: "cell", sender: nil)
@@ -93,8 +94,8 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
     }
     @objc func anim (){
     
-        let lastItem = CollectionPlaces.indexPathsForVisibleItems.last
-        let currentItem = IndexPath(item: lastItem!.item, section: 0)
+        if let lastItem = CollectionPlaces.indexPathsForVisibleItems.last?.item {
+        let currentItem = IndexPath(item: lastItem, section: 0)
         CollectionPlaces.scrollToItem(at: currentItem, at: .right, animated: true)
         var nextItem = currentItem.item + 1
         
@@ -105,6 +106,9 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
         }
         let nextIndexPath = IndexPath(item: nextItem, section: 0)
         CollectionPlaces.scrollToItem(at: nextIndexPath, at: .right, animated: true)
+        } else {
+            
+        }
     }
     
 

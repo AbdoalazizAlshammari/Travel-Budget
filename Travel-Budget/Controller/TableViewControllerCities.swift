@@ -42,12 +42,13 @@ class TableViewControllerCities: UITableViewController {
         
         guard let url = URL(string: citys[indexPath.row].imageCity ?? "" )else { return UITableViewCell() }
         
-        if let data = try? Data(contentsOf: url) {
-            cell.imageCities.image = UIImage(data: data)
-        }
+//        if let data = try? Data(contentsOf: url) {
+//            cell.imageCities.image = UIImage(data: data)
+//        }
+        cell.imageCities.kf.setImage(with: url,options: [.cacheOriginalImage])
         
         cell.nameCities.text = citys[indexPath.row].name
-        
+        cell.layer.cornerRadius = 12
         return cell
     }
     
@@ -69,3 +70,4 @@ class TableViewControllerCities: UITableViewController {
         return view.frame.size.width
     }
 }
+

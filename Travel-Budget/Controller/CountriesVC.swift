@@ -7,11 +7,14 @@
 
 import UIKit
 import FirebaseFirestore
+import Kingfisher
+
 
 
 class CountriesVC:
     UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
+
     
     var countries = [Countries]()
     var selctedId : String?
@@ -53,14 +56,13 @@ class CountriesVC:
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CountriesCell", for: indexPath) as! CollectionViewCellCountries
         
         guard let url = URL(string: countries[indexPath.row].imageCountry ?? "") else { return UICollectionViewCell() }
+       
+        cell.countryImage.kf.setImage(with: url, options: [.cacheOriginalImage])
         
-        if let data = try? Data(contentsOf: url) {
-            cell.countryImage.image = UIImage(data: data)
-        }
         cell.countryName.text = countries[indexPath.row].nameCountry
         
         cell.favrite = countries[indexPath.row].id ?? ""
-        
+        cell.layer.cornerRadius = 6
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -75,14 +77,14 @@ class CountriesVC:
         vc.selctedId = selctedId
     }
     //}
-    func CollectionView(_ CollectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
-        
-    }
+//    func CollectionView(_ CollectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 200
+//
+//    }
     
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 180)
+        return CGSize(width: 190, height: 190)
     }
 }
 

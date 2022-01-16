@@ -40,9 +40,13 @@
 		0486A575277DA05600A3332C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0486A574277DA05600A3332C /* FirebaseAnalytics */; };
 		0486A577277DA05600A3332C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0486A576277DA05600A3332C /* FirebaseFirestore */; };
 		0486A579277DA05600A3332C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0486A578277DA05600A3332C /* FirebaseStorage */; };
+		04C967A927937FFC00B46A55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C967A827937FFC00B46A55 /* Localizable.strings */; };
 		04D73EC1277C547C0038B70B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D73EC0277C547C0038B70B /* Weather.swift */; };
 		04D73EC3277C54A50038B70B /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D73EC2277C54A50038B70B /* WeatherApi.swift */; };
 		04D73EC8277D95B40038B70B /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D73EC7277D95B40038B70B /* WeatherVC.swift */; };
+		04FB1E42278ACE6D00794DD1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 04FB1E41278ACE6D00794DD1 /* Kingfisher */; };
+		04FB1E44278AD3DF00794DD1 /* FavoriteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB1E43278AD3DF00794DD1 /* FavoriteApi.swift */; };
+		04FB1E48278B096200794DD1 /* TableViewCellFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB1E47278B096200794DD1 /* TableViewCellFavorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,9 +77,14 @@
 		04704FFD27672F4A003E028B /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		04704FFF27673002003E028B /* CountriesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesApi.swift; sourceTree = "<group>"; };
 		04705001276A0654003E028B /* TableViewControllerProfileUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerProfileUser.swift; sourceTree = "<group>"; };
+		04C967A427920D0500B46A55 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		04C967A527920D0600B46A55 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		04C967A827937FFC00B46A55 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04D73EC0277C547C0038B70B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		04D73EC2277C54A50038B70B /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		04D73EC7277D95B40038B70B /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
+		04FB1E43278AD3DF00794DD1 /* FavoriteApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteApi.swift; sourceTree = "<group>"; };
+		04FB1E47278B096200794DD1 /* TableViewCellFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellFavorite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,7 @@
 				04089CA3277DAB0D0075B9A7 /* SwiftyJSON in Frameworks */,
 				04089CA8277DABC10075B9A7 /* NVActivityIndicatorViewExtended in Frameworks */,
 				0486A575277DA05600A3332C /* FirebaseAnalytics in Frameworks */,
+				04FB1E42278ACE6D00794DD1 /* Kingfisher in Frameworks */,
 				04089CA6277DABC10075B9A7 /* NVActivityIndicatorView in Frameworks */,
 				04089CA0277DA9970075B9A7 /* FirebaseAuth in Frameworks */,
 				0486A579277DA05600A3332C /* FirebaseStorage in Frameworks */,
@@ -112,6 +122,7 @@
 				044BDE01276B786E00119E5F /* CitiysApi.swift */,
 				044BDE06276F0DDC00119E5F /* PlacesApi.swift */,
 				04D73EC2277C54A50038B70B /* WeatherApi.swift */,
+				04FB1E43278AD3DF00794DD1 /* FavoriteApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -152,6 +163,7 @@
 		046383A1275F78DB00711E99 /* Travel-Budget */ = {
 			isa = PBXGroup;
 			children = (
+				04C967AA279385DA00B46A55 /* Localizable */,
 				04704FF82765E5C9003E028B /* Controller */,
 				046383C1275F865600711E99 /* Model */,
 				046383A2275F78DB00711E99 /* AppDelegate.swift */,
@@ -182,9 +194,7 @@
 		04704FF82765E5C9003E028B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				046383CA2760C42F00711E99 /* CollectionViewCellCountries.swift */,
-				046383D22762211E00711E99 /* TableViewCellCities.swift */,
-				046383CC2760EE3400711E99 /* CollectionViewCell.swift */,
+				04C967A327920CAF00B46A55 /* Cell */,
 				044BDE05276B79B700119E5F /* SginUp */,
 				044BDE04276B798F00119E5F /* Login */,
 				046383A6275F78DB00711E99 /* SelectedBudgetVC.swift */,
@@ -195,6 +205,25 @@
 				0413DB5B27857F230017B4D7 /* TableViewControllerFavorite.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C967A327920CAF00B46A55 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				046383CA2760C42F00711E99 /* CollectionViewCellCountries.swift */,
+				046383D22762211E00711E99 /* TableViewCellCities.swift */,
+				046383CC2760EE3400711E99 /* CollectionViewCell.swift */,
+				04FB1E47278B096200794DD1 /* TableViewCellFavorite.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04C967AA279385DA00B46A55 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				04C967A827937FFC00B46A55 /* Localizable.strings */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +251,7 @@
 				04089CA2277DAB0D0075B9A7 /* SwiftyJSON */,
 				04089CA5277DABC10075B9A7 /* NVActivityIndicatorView */,
 				04089CA7277DABC10075B9A7 /* NVActivityIndicatorViewExtended */,
+				04FB1E41278ACE6D00794DD1 /* Kingfisher */,
 			);
 			productName = "Travel-Budget";
 			productReference = 0463839F275F78DB00711E99 /* Travel-Budget.app */;
@@ -249,6 +279,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 04638396275F78DB00711E99;
 			packageReferences = (
@@ -256,6 +287,7 @@
 				0486A573277DA05600A3332C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				04089CA1277DAB0D0075B9A7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				04089CA4277DABC10075B9A7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				04FB1E40278ACE6D00794DD1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 046383A0275F78DB00711E99 /* Products */;
 			projectDirPath = "";
@@ -271,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C967A927937FFC00B46A55 /* Localizable.strings in Resources */,
 				046383AF275F78DF00711E99 /* LaunchScreen.storyboard in Resources */,
 				046383B7275F7FEB00711E99 /* GoogleService-Info.plist in Resources */,
 				046383AC275F78DF00711E99 /* Assets.xcassets in Resources */,
@@ -290,6 +323,7 @@
 				044BDE02276B786E00119E5F /* CitiysApi.swift in Sources */,
 				046383A7275F78DB00711E99 /* SelectedBudgetVC.swift in Sources */,
 				046383A3275F78DB00711E99 /* AppDelegate.swift in Sources */,
+				04FB1E48278B096200794DD1 /* TableViewCellFavorite.swift in Sources */,
 				04704FFA27662E3B003E028B /* Countrie.swift in Sources */,
 				04D73EC8277D95B40038B70B /* WeatherVC.swift in Sources */,
 				046383CD2760EE3400711E99 /* CollectionViewCell.swift in Sources */,
@@ -305,6 +339,7 @@
 				046383CB2760C42F00711E99 /* CollectionViewCellCountries.swift in Sources */,
 				046383D32762211E00711E99 /* TableViewCellCities.swift in Sources */,
 				0470500027673002003E028B /* CountriesApi.swift in Sources */,
+				04FB1E44278AD3DF00794DD1 /* FavoriteApi.swift in Sources */,
 				044BDE07276F0DDD00119E5F /* PlacesApi.swift in Sources */,
 				046383C92760C37900711E99 /* CountriesVC.swift in Sources */,
 				04705002276A0654003E028B /* TableViewControllerProfileUser.swift in Sources */,
@@ -319,6 +354,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				046383A9275F78DB00711E99 /* Base */,
+				04C967A427920D0500B46A55 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -327,6 +363,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				046383AE275F78DF00711E99 /* Base */,
+				04C967A527920D0600B46A55 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -338,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -399,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -562,6 +601,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		04FB1E40278ACE6D00794DD1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -604,6 +651,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0486A573277DA05600A3332C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		04FB1E41278ACE6D00794DD1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04FB1E40278ACE6D00794DD1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

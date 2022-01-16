@@ -33,16 +33,10 @@ class UserApi {
         }
     }
     
-    static func addFavorite(uid:String,favorite:String) {
-        
-        let refCountries = Firestore.firestore().collection("Countries")
-        let refFavorite = Firestore.firestore().collection("Favorite")
-        
-        refCountries.document(favorite).getDocument { document, error in
-            if let document = document, document.exists {
-                refFavorite.document(uid).collection("AllFA").document().setData(document.data()!)
-            }
-        }
-    }
+  
+   
+
     
 }
+
+

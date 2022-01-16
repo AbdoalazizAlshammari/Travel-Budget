@@ -7,12 +7,12 @@
 
 import UIKit
 import FirebaseAuth
-
+// SginUp controller with 
 class SginUpVC: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var passowrd: UITextField!
-    @IBOutlet weak var Phone: UITextField!
+    @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var name: UITextField!
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class SginUpVC: UIViewController {
     }
 
     
-    func SignUp(email: String,password:String,phone:String,name:String) {
+    func signUp(email: String,password:String,phone:String,name:String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             
             print("email:\(String(describing: authResult?.user.email))")
@@ -34,28 +34,30 @@ class SginUpVC: UIViewController {
             UserApi.addUser(name: name, uid: authResult?.user.uid ?? "", phone: phone, email: email, favorite: ["favorite"]) { check in
               
                 if check {
-//                    self.showAlert(DisplayAlert(withTitle: "thnak you for Signing up", message: "welcome", isSginup: true))
-                    self.DisplayAlert(withTitle: "thank you for signing up", message: "weclome", isSginup: true)
+
+                    self.displayAlert(withTitle: "thank you for signing up", message: "weclome", isSginup: true)
                     print("Done saving in Database")
-                    /// fffffff
                 } else {
-                    self.DisplayAlert(withTitle: "fail", message: "", isSginup: false)
+                    self.displayAlert(withTitle: "fail", message: "", isSginup: false)
                 }
             }
         }
     }
+    
   
     @IBAction func sginup(_ sender: Any) {
         
     
-        SignUp(email: email.text ?? "", password: passowrd.text ?? "", phone: Phone.text ?? "", name: name.text ?? "")
+        signUp(email: email.text ?? "", password: passowrd.text ?? "", phone: phone.text ?? "", name: name.text ?? "")
+        self.displayAlert(withTitle: "fail", message: "re", isSginup: false)
+        
 
     }
-    func DisplayAlert(withTitle title: String, message: String,isSginup: Bool) {
+    func displayAlert(withTitle title: String, message: String,isSginup: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: { action in
             if isSginup {
-                self.performSegue(withIdentifier: NSLocalizedString("registrationscreen", comment: ""), sender: nil)
+                self.performSegue(withIdentifier: NSLocalizedString("Gohome", comment: ""), sender: nil)
             } else {
                 
             }
