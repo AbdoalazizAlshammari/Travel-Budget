@@ -14,16 +14,12 @@ import Kingfisher
 class CountriesVC:
     UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
-
-    
     var countries = [Countries]()
     var selctedId : String?
     var casees :Int?
     
-//    var selctedcase : Countries?
-//    var setselctedcase : Countries?
     
-    @IBOutlet weak var CollectionCountries: UICollectionView!
+    @IBOutlet weak var collectionCountries: UICollectionView!
     
     
     override func viewDidLoad() {
@@ -35,15 +31,15 @@ class CountriesVC:
                
                 if self.casees == countries.selctedCase {
                     self.countries.append(countries)
-                    self.CollectionCountries.reloadData()
+                    self.collectionCountries.reloadData()
                 }
              
                
             }
         }
         
-        CollectionCountries.dataSource = self
-        CollectionCountries.delegate = self
+        collectionCountries.dataSource = self
+        collectionCountries.delegate = self
         
     }
     
@@ -60,14 +56,15 @@ class CountriesVC:
         cell.countryImage.kf.setImage(with: url, options: [.cacheOriginalImage])
         
         cell.countryName.text = countries[indexPath.row].nameCountry
+        cell.parentController = self
         
         cell.favrite = countries[indexPath.row].id ?? ""
         cell.layer.cornerRadius = 6
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selctedId = countries[indexPath.row].id//[0].name
-        print(selctedId)
+        selctedId = countries[indexPath.row].id
+ 
         performSegue(withIdentifier: "ToCities", sender: nil)
         
     }
@@ -76,15 +73,15 @@ class CountriesVC:
         let vc = segue.destination as! TableViewControllerCities
         vc.selctedId = selctedId
     }
-    //}
-//    func CollectionView(_ CollectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 200
-//
-//    }
+
+    func collectionView(_ CollectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 400
+
+    }
     
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 190, height: 190)
+        return CGSize(width: 190, height: 240)
     }
 }
 

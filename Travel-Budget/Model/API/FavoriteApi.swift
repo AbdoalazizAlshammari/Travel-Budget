@@ -47,16 +47,7 @@ class FavoriteApi{
         let refFavorite = Firestore.firestore().collection("Favorite")
         
         refFavorite.document(uid).collection("AllFA").document(favorite).delete()
-           // [START delete_document]
-//           db.collection("Favorite").document("AllFA").delete() { err in
-//               if let err = err {
-//                   print("Error removing document: \(err)")
-//               } else {
-//                       print("Document successfully removed!")
-//               }
-//
-//           }
-//           // [END delete_document]
+
        }
     
     

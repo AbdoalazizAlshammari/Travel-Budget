@@ -35,10 +35,10 @@ class SginUpVC: UIViewController {
               
                 if check {
 
-                    self.displayAlert(withTitle: "thank you for signing up", message: "weclome", isSginup: true)
+                    self.displayAlert(withTitle: "thank you for signing up".localize, message: "weclome".localize, isSginup: true)
                     print("Done saving in Database")
                 } else {
-                    self.displayAlert(withTitle: "fail", message: "", isSginup: false)
+                    self.displayAlert(withTitle: "fail".localize, message: "", isSginup: false)
                 }
             }
         }
@@ -47,15 +47,20 @@ class SginUpVC: UIViewController {
   
     @IBAction func sginup(_ sender: Any) {
         
+        
+        if email.text!.isEmpty && passowrd.text!.isEmpty && phone.text!.isEmpty && name.text!.isEmpty {
+            self.displayAlert(withTitle: "Failed".localize, message: "please type in your email, password and phone number".localize, isSginup: false)
+        }else{
+
     
         signUp(email: email.text ?? "", password: passowrd.text ?? "", phone: phone.text ?? "", name: name.text ?? "")
-        self.displayAlert(withTitle: "fail", message: "re", isSginup: false)
         
+        }
 
     }
     func displayAlert(withTitle title: String, message: String,isSginup: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: { action in
+        let okAction = UIAlertAction(title: NSLocalizedString("Ok".localize, comment: ""), style: .default, handler: { action in
             if isSginup {
                 self.performSegue(withIdentifier: NSLocalizedString("Gohome", comment: ""), sender: nil)
             } else {
@@ -69,3 +74,9 @@ class SginUpVC: UIViewController {
 
 
 }
+//extension String {
+//    var localizee :String{
+//
+//        return NSLocalizedString(self, comment: "")
+//    }
+//}

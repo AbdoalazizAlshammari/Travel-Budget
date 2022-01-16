@@ -31,9 +31,9 @@ class SginInVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "Home", sender: nil)
-        }
+//        if Auth.auth().currentUser != nil {
+//            self.performSegue(withIdentifier: "Home", sender: nil)
+//        }
     }
     func SignIn(email: String,password:String) {
 
@@ -41,8 +41,8 @@ class SginInVC: UIViewController {
 
             if let error = error {
                 print(error.localizedDescription)
-    let errorUser = UIAlertController(title: "The Email or The Password is wrong.", message: "You must check the Email and password ", preferredStyle: .alert)
-    errorUser.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+                let errorUser = UIAlertController(title: "The Email or The Password is wrong.".localize, message: "You must check the Email and password".localize, preferredStyle: .alert)
+                errorUser.addAction(UIAlertAction(title: "try again".localize, style: .cancel, handler: nil))
                 self.present(errorUser, animated: false)
             }else {
                 self.performSegue(withIdentifier: "Home", sender: nil)

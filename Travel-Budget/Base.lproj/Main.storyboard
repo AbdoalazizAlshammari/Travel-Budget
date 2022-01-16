@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Kg-vh-9ew">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bt0-IL-k3Q">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -67,7 +67,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="SginUp"/>
                                 <connections>
                                     <action selector="Sginup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbY-Kf-kIk"/>
-                                    <segue destination="lO1-Ru-p5A" kind="show" identifier="registrationscreen" id="ukO-lC-9LA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPy-8Y-UYw">
@@ -119,16 +118,17 @@
                         <outlet property="email" destination="J54-Az-clh" id="rbF-Yc-tbv"/>
                         <outlet property="passowrd" destination="nCZ-33-jtx" id="cDl-lf-yeH"/>
                         <segue destination="ESP-wA-8ow" kind="presentation" identifier="Home" id="33T-Oo-kHV"/>
+                        <segue destination="lO1-Ru-p5A" kind="show" identifier="registrationscreen" id="t0R-YC-uYZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705.7971014492755" y="-695.08928571428567"/>
+            <point key="canvasLocation" x="2615.9420289855075" y="-695.08928571428567"/>
         </scene>
         <!--Sgin UpVC-->
         <scene sceneID="fps-mh-KOl">
             <objects>
-                <viewController id="lO1-Ru-p5A" customClass="SginUpVC" customModule="Travel_Budget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="lO1-Ru-p5A" customClass="SginUpVC" customModule="Travel_Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NSQ-Qw-kO9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLa-32-UV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705.7971014492755" y="95.758928571428569"/>
+            <point key="canvasLocation" x="1736" y="82"/>
         </scene>
         <!--Places And Info Forcity-->
         <scene sceneID="spX-fx-9kT">
@@ -295,7 +295,7 @@
                                     <constraint firstAttribute="height" constant="222" id="CBz-Jo-ATb"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yQi-HY-t8I">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQi-HY-t8I">
                                 <rect key="frame" x="20" y="596" width="381" height="217"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="systemTealColor"/>
@@ -367,8 +367,8 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4999" minValue="4999" maxValue="100000" translatesAutoresizingMaskIntoConstraints="NO" id="0P3-xA-mSN">
                                         <rect key="frame" x="-2" y="136" width="378" height="31"/>
                                         <connections>
-                                            <action selector="SliderDidSlide:" destination="xCK-Xg-tdw" eventType="valueChanged" id="PIn-js-JKB"/>
                                             <action selector="SliderDidSlide:" destination="5as-Dc-1Yd" eventType="valueChanged" id="ZBH-Md-1zy"/>
+                                            <action selector="sliderDidSlide:" destination="xCK-Xg-tdw" eventType="valueChanged" id="erI-lv-6bD"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -384,7 +384,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search"/>
                                 <connections>
-                                    <action selector="SearchButton:" destination="xCK-Xg-tdw" eventType="touchUpInside" id="Hlx-ll-0gA"/>
+                                    <action selector="searchButton:" destination="xCK-Xg-tdw" eventType="touchUpInside" id="8Bf-Ln-oAd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPE-AI-JRo">
@@ -432,25 +432,6 @@
             </objects>
             <point key="canvasLocation" x="4484.057971014493" y="81.696428571428569"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="VaV-Q8-KgM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Kg-vh-9ew" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0fY-Pk-5Mq"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="74v-Ti-gig">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pby-ul-Emd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BRD-SC-Tqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="807" y="-695"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jjm-Ll-x1G">
             <objects>
@@ -472,7 +453,7 @@
             </objects>
             <point key="canvasLocation" x="2667" y="96"/>
         </scene>
-        <!--Table View Controller Favorite-->
+        <!--Favorite-->
         <scene sceneID="0uo-LO-bk9">
             <objects>
                 <tableViewController id="0MJ-RO-yPm" customClass="TableViewControllerFavorite" customModule="Travel_Budget" customModuleProvider="target" sceneMemberID="viewController">
@@ -529,7 +510,7 @@
                             <outlet property="delegate" destination="0MJ-RO-yPm" id="F4n-sr-vTC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bPA-1F-yVH">
+                    <navigationItem key="navigationItem" title="Favorite" id="bPA-1F-yVH">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="bep-Fu-T6M">
                             <connections>
                                 <action selector="deleteFav:" destination="0MJ-RO-yPm" id="fgM-Uy-TVt"/>
@@ -747,7 +728,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="List of Countries" id="pSB-Cm-3ZJ"/>
                     <connections>
-                        <outlet property="CollectionCountries" destination="zil-SD-XjN" id="Hh4-hb-zj6"/>
+                        <outlet property="collectionCountries" destination="zil-SD-XjN" id="Hh4-hb-zj6"/>
                         <segue destination="42U-YV-waZ" kind="show" identifier="ToCities" id="P4u-Vh-6TA"/>
                     </connections>
                 </viewController>
@@ -959,10 +940,28 @@
             </objects>
             <point key="canvasLocation" x="7746" y="82"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="igp-Ay-6la">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bt0-IL-k3Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QEH-HT-Gmq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kJw-ss-Pav"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ti4-rt-QOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705.7971014492755" y="-695.08928571428567"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xNB-i3-Fcv"/>
-        <segue reference="1q3-VE-yhb"/>
+        <segue reference="33T-Oo-kHV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="01d" width="512" height="512"/>

@@ -15,13 +15,6 @@ class TableViewControllerFavorite: UITableViewController {
     var selectedId : String?
     let db = Firestore.firestore()
 
-//    var setselectedId : String?
-//    var selectedFavarites : UserApi?
-    
-    
-//    @IBOutlet var tableViewFavorite: UITableView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 //     deleteDocument()
@@ -35,8 +28,6 @@ class TableViewControllerFavorite: UITableViewController {
         FavoriteApi.getFavorite(uid: Auth.auth().currentUser?.uid ?? "") { countries in
             DispatchQueue.main.async {
                 self.countries.append(countries)
-                
-                print("++++++viewWillAppear")
                 self.tableView.reloadData()
             }
         }
@@ -71,18 +62,18 @@ class TableViewControllerFavorite: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        selectedId = countries[indexPath.row].id
+   
+                      // Any action when you cancel
+                 
+       
+      selectedId = countries[indexPath.row].id
         performSegue(withIdentifier: "GoDetail", sender: nil)
-        
+      
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! TableViewControllerCities
         vc.selctedId = selectedId
-        
-        
-
     }
     @IBAction func deleteFav(_ sender: Any) {
         if tableView.isEditing{

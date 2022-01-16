@@ -15,12 +15,7 @@ class TableViewCellFavorite: UITableViewCell {
     
     @IBOutlet weak var countryTitle: UILabel!
     
-//    var countery:Countries? {
-//
-//        didSet {
-//            view()
-//        }
-//    }
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

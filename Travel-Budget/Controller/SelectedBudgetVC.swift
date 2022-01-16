@@ -23,9 +23,9 @@ class SelectedBudgetVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let currentval = Int(sliderValue.value)
-        label.text = "\(currentval)SAR".localization
+        label.text = "\(currentval)" + "SAR".localize
     }
-    func DisplayAlert(withTitle title: String, message: String,isFound: Bool) {
+    func displayAlert(withTitle title: String, message: String,isFound: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okFound = UIAlertAction(title:NSLocalizedString("Ok", comment: ""), style: .default, handler: { action in
             if isFound {
@@ -38,13 +38,13 @@ class SelectedBudgetVC: UIViewController {
         alert.addAction(okFound)
         self.present(alert, animated: true)
     }
-    @IBAction func SliderDidSlide(_ sender: UISlider) {
+    @IBAction func sliderDidSlide(_ sender: UISlider) {
         
-        let currentval = Int(sliderValue.value)
-        label.text = "\(currentval) SAR".localization
+        let currentVal = Int(sliderValue.value)
+        label.text = "\(currentVal) SAR".localize
     }
     
-    @IBAction func SearchButton(_ sender: Any) {
+    @IBAction func searchButton(_ sender: Any) {
         let currentval = sliderValue.value
         switch currentval {
             
@@ -60,7 +60,7 @@ class SelectedBudgetVC: UIViewController {
             casee = 4
         default:
             
-            DisplayAlert(withTitle: NSLocalizedString(" No trip Found", comment: ""), message: "", isFound: false)
+            displayAlert(withTitle: NSLocalizedString(" No trip Found".localize, comment: ""), message: "", isFound: false)
         }
         performSegue(withIdentifier: "ToCountries", sender: nil)
     }
@@ -72,7 +72,7 @@ class SelectedBudgetVC: UIViewController {
 
 extension String {
     
-    var localization:String {
+    var localize:String {
         return NSLocalizedString(self, comment: "")
     }
     

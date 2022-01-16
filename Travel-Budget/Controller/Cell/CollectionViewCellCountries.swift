@@ -19,6 +19,9 @@ class CollectionViewCellCountries:UICollectionViewCell {
     @IBOutlet weak var countryName: UILabel!
     
     
+    var parentController : UIViewController!
+    
+    
     var favrite : String = ""
     
     override func awakeFromNib() {
@@ -28,6 +31,7 @@ class CollectionViewCellCountries:UICollectionViewCell {
    // action for add to fav selected failled red
 
     @IBAction func addFavorite(_ sender: Any) {
+        
         
         if activeFav {
             
@@ -44,8 +48,11 @@ class CollectionViewCellCountries:UICollectionViewCell {
             UserApi.getUser(uid: uid) { user in
                 
                 FavoriteApi.addFavorite(uid: uid, favorite: self.favrite)
-                
             }
         }
+        
+        let favAdded = UIAlertController(title: "Done".localize, message: "Favorite Added in the list".localize, preferredStyle: .alert)
+        favAdded.addAction(UIAlertAction(title: "Done".localize, style: .cancel,handler: nil))
+        self.parentController.present(favAdded, animated: true, completion: nil)
     }
 }

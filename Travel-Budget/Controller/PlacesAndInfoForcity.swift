@@ -31,7 +31,7 @@ class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(anim), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(anim), userInfo: nil, repeats: true)
         
         
         

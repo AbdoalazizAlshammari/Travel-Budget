@@ -5,15 +5,26 @@
   Created by Mac on 16/01/2022.
   
 */
-"SAR" = " ر. س";
+"SAR" = "ر. س";
 "Ok" = "اوك";
 " No trip Found" = "لم يتم العثور على رحلة";
 "The Email or The Password is wrong." = "البريد الإلكتروني أو كلمة المرور خطأ";
-"You must check the Email and password " = "يجب عليك التحقق من بريدك الإلكتروني وكلمة المرور";
+"You must check the Email and password" = "يجب عليك التحقق من بريدك الإلكتروني وكلمة المرور";
 "try again" = "حاول مرة أخرى";
 "Thank you for signing up" = "شكرا لك على التسجيل";
 "fail" = "فشل";
 "Please try again" = "حاول مرة اخرى";
+"weclome" = "مرحبا";
+"please type in your email, password and phone number" = "يرجى كتابة بريدك الإلكتروني وكلمة المرور ورقم الهاتف صحيح";
+"The Email or The Password is wrong." = "البريد الإلكتروني أو كلمة المرور خاطئة.";
+//"main" = "الرئيسية";
+//"name" = "أسم";
+//"temp" = "درجة الحرارة";
+"Failed" = "فشل";
+"Done" = "تم";
+"Favorite Added in the list" = "تم الإضافة الى قائمة المفضلة";
+
+
 
 
 

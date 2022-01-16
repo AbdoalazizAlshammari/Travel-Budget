@@ -16,7 +16,7 @@ class UserApi {
         let refUsers = Firestore.firestore().collection("Users")
         
         
-        refUsers.document(uid).setData(User.CreateUser(name: name, phone: phone, email: email,favorite: favorite))
+        refUsers.document(uid).setData(User.createUser(name: name, phone: phone, email: email,favorite: favorite))
         
         completion(true)
         

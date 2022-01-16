@@ -29,7 +29,7 @@ class CountriesApi {
 //    static func duplicateCountries() {
 //        for _ in 1...3 {
 //            let refCountries = Firestore.firestore().collection("Countries")
-//            refCountries.document("YPhHSktY3PfaEki5Iksq").getDocument { document, error in
+//            refCountries.document("XTmt1PGx45FQ6KrEXcBf").getDocument { document, error in
 //                if let document = document, document.exists {
 //                    refCountries.document().setData(document.data()!)
 //                }

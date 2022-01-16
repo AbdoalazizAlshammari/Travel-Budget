@@ -28,7 +28,7 @@ extension User {
         user.favorite = dict["favorite"] as? [String]
         return user
     }
-    static func CreateUser(name:String,phone:String,email:String,favorite:[String]) -> [String: Any] {
+    static func createUser(name:String,phone:String,email:String,favorite:[String]) -> [String: Any] {
        
         let newUser = ["name":phone,
                        "phone":name,
@@ -40,11 +40,11 @@ extension User {
     }
     static func addFavorite(favorite:[String]) -> [String: Any] {
        
-        let User = [
+        let user = [
                        "favorite" :[favorite],
                     ] as [String : Any]
         
-        return User
+        return user
     }
     
     static func getFavorite(dict: [String: Any]) -> User {
