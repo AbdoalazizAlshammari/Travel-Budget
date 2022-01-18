@@ -195,7 +195,6 @@
 				04704FF927662E3B003E028B /* Countrie.swift */,
 				04704FFD27672F4A003E028B /* Places.swift */,
 				04704FFB27672ED5003E028B /* Cities.swift */,
-				04705001276A0654003E028B /* TableViewControllerProfileUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +210,7 @@
 				046383D0276220C300711E99 /* TableViewControllerCities.swift */,
 				044BDDFF276B746900119E5F /* PlacesAndInfoForcity.swift */,
 				04D73EC7277D95B40038B70B /* WeatherVC.swift */,
+				04705001276A0654003E028B /* TableViewControllerProfileUser.swift */,
 				0413DB5B27857F230017B4D7 /* TableViewControllerFavorite.swift */,
 			);
 			path = Controller;
