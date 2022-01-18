@@ -8,9 +8,9 @@
 import Foundation
 import FirebaseFirestore
 
-
+// Class User Api
 class UserApi {
-    
+    // add user data to firebase
     static func addUser(name:String,uid:String,phone:String,email:String,favorite:[String],completion: @escaping (Bool) -> Void) {
         
         let refUsers = Firestore.firestore().collection("Users")
@@ -21,6 +21,7 @@ class UserApi {
         completion(true)
         
     }
+    // to get user
     static func getUser(uid:String,completion: @escaping (User) -> Void) {
         
         let refUsers = Firestore.firestore().collection("Users")
@@ -32,11 +33,6 @@ class UserApi {
             }
         }
     }
-    
-  
-   
-
-    
 }
 
 

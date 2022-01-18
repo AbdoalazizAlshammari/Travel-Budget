@@ -9,7 +9,7 @@ import Foundation
 import FirebaseFirestore
 class CountriesApi {
     
-    
+    // to get countries from firebase
     static func getCountries(completion: @escaping (Countries) -> Void) {
         
         let refCountries = Firestore.firestore().collection("Countries")
@@ -26,17 +26,17 @@ class CountriesApi {
             }
         }
     }
-//    static func duplicateCountries() {
-//        for _ in 1...3 {
-//            let refCountries = Firestore.firestore().collection("Countries")
-//            refCountries.document("XTmt1PGx45FQ6KrEXcBf").getDocument { document, error in
-//                if let document = document, document.exists {
-//                    refCountries.document().setData(document.data()!)
+//        static func duplicateCountries() {
+//            for _ in 1...1 {
+//                let refCountries = Firestore.firestore().collection("Countries")
+//                refCountries.document("0D0md5CbnM1nYoI2PSlX").getDocument { document, error in
+//                    if let document = document, document.exists {
+//                        refCountries.document().setData(document.data()!)
+//                    }
 //                }
 //            }
 //        }
-//    }
-    
+//    
     
     func config(with:String){
         

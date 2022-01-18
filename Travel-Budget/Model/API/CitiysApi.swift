@@ -7,9 +7,8 @@
 
 import Foundation
 import FirebaseFirestore
-
+// to get Cities from firebase
 class CitiysApi {
-    
     
     static func getCitys(idCountry:String,completion: @escaping (Cities) -> Void) {
         
@@ -23,10 +22,7 @@ class CitiysApi {
                     let objectCity = Cities.getDataFromCities(dict: citysKey["\(key)"] as! [String : Any])
                     completion(objectCity)
                 }
-                
             }
         }
     }
-    
-    
 }

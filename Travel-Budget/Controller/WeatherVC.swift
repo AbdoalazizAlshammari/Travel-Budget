@@ -1,10 +1,10 @@
 //
-//  ViewController.swift
-//  Weather
+//  TableViewControllerFavorite.swift
+//  Travel-Budget
 //
-//  Created by Chandarong Nuon on 6/10/18.
-//  Copyright © 2018 App Elegant. All rights reserved.
+//  Created by Mac on 25/12/2022.
 //
+
 
 import Foundation
 import UIKit
@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 import NVActivityIndicatorView
 import CoreLocation
-
+// This is class weather
 class WeatherVC: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var locationLabel: UILabel!
@@ -23,13 +23,14 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var backgroundView: UIView!
-    
+
     let gradientLayer = CAGradientLayer()
-    
-    let apiKey = "8c1e240150949fb7bfe0bf0503c8a20e"
+    let apiKey = "9a98fe4094ca500b49594033ed0946a9"
     var lat = 11.344533
     var lon = 104.33322
+// The CLLocationManager object is your entry point to the location service.
     var activityIndicator: NVActivityIndicatorView!
+// This class to configure, start, and stop the Core Location services.
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -65,10 +66,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     func setLocation(){
         
-//        let location = locations[0]
-//        lat = location.coordinate.latitude
-//        lon = location.coordinate.longitude
-        
         
         print(lat)
         print(lon)
@@ -102,18 +99,18 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate {
         }
         self.locationManager.stopUpdatingLocation()
     }
-    
+// location mananger:monitoringDidFailForRegion:withError
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
-    
+// Set background
     func setBlueGradientBackground(){
         let topColor = UIColor(red: 95.0/255.0, green: 165.0/255.0, blue: 1.0, alpha: 1.0).cgColor
         let bottomColor = UIColor(red: 72.0/255.0, green: 114.0/255.0, blue: 184.0/255.0, alpha: 1.0).cgColor
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [topColor, bottomColor]
     }
-    
+// Set background
     func setGreyGradientBackground(){
         let topColor = UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0).cgColor
         let bottomColor = UIColor(red: 72.0/255.0, green: 72.0/255.0, blue: 72.0/255.0, alpha: 1.0).cgColor

@@ -9,7 +9,7 @@ import UIKit
 import FirebaseFirestore
 import Kingfisher
 
-
+// This is View Controller with Collection View for countries and name
 
 class CountriesVC:
     UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
@@ -18,31 +18,29 @@ class CountriesVC:
     var selctedId : String?
     var casees :Int?
     
-    
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var collectionCountries: UICollectionView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        CountriesApi.duplicateCountries()
+//                CountriesApi.duplicateCountries()
         
         CountriesApi.getCountries { countries in
             DispatchQueue.main.async {
-               
+                
                 if self.casees == countries.selctedCase {
                     self.countries.append(countries)
                     self.collectionCountries.reloadData()
                 }
-             
-               
+                
+                self.activity.isHidden = true
             }
         }
         
         collectionCountries.dataSource = self
         collectionCountries.delegate = self
-        
     }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return countries.count
     }
@@ -52,7 +50,7 @@ class CountriesVC:
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CountriesCell", for: indexPath) as! CollectionViewCellCountries
         
         guard let url = URL(string: countries[indexPath.row].imageCountry ?? "") else { return UICollectionViewCell() }
-       
+        
         cell.countryImage.kf.setImage(with: url, options: [.cacheOriginalImage])
         
         cell.countryName.text = countries[indexPath.row].nameCountry
@@ -64,7 +62,7 @@ class CountriesVC:
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selctedId = countries[indexPath.row].id
- 
+        
         performSegue(withIdentifier: "ToCities", sender: nil)
         
     }
@@ -73,13 +71,14 @@ class CountriesVC:
         let vc = segue.destination as! TableViewControllerCities
         vc.selctedId = selctedId
     }
-
+    
+    
     func collectionView(_ CollectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
-
+        
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 190, height: 240)
     }

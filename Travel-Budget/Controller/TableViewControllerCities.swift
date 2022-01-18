@@ -13,7 +13,6 @@ class TableViewControllerCities: UITableViewController {
     var citys = [Cities]()
     var selctedId : String?
     var setSelctedId : String?
-    
     var selctedCity: Cities?
     
     override func viewDidLoad() {

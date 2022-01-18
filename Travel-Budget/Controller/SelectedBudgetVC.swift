@@ -1,20 +1,17 @@
 //
 //  ViewController.swift
 //  Travel-Budget
-//
 //  Created by Mac on 07/12/2021.
-//
 
 import UIKit
 import FirebaseFirestore
-// calss
+
+// Calss View Controller to determine your budget and see countries based upon your budget
 class SelectedBudgetVC: UIViewController {
     
     var casee: Int?
-    
     var selectedCase:String?
     var setSelectedCase:String?
-    
     var selctedCase : Countries?
     
     @IBOutlet weak var sliderValue: UISlider!
@@ -23,7 +20,7 @@ class SelectedBudgetVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let currentval = Int(sliderValue.value)
-        label.text = "\(currentval)" + "SAR".localize
+        label.text = "\(currentval)" + "SAR"
     }
     func displayAlert(withTitle title: String, message: String,isFound: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -33,7 +30,6 @@ class SelectedBudgetVC: UIViewController {
             } else {
                 
             }
-            
         })
         alert.addAction(okFound)
         self.present(alert, animated: true)
@@ -41,7 +37,7 @@ class SelectedBudgetVC: UIViewController {
     @IBAction func sliderDidSlide(_ sender: UISlider) {
         
         let currentVal = Int(sliderValue.value)
-        label.text = "\(currentVal) SAR".localize
+        label.text = "\(currentVal) SAR"
     }
     
     @IBAction func searchButton(_ sender: Any) {

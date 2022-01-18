@@ -6,7 +6,7 @@
 //
 
 import UIKit
-// cell for places and info for city controllers 
+// Cell for places and info for city controllers 
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imagesCollectionPlaces: UIImageView!

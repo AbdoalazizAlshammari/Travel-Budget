@@ -6,24 +6,19 @@
 //
 
 import Foundation
-
+//class countries with its partperites
 class Countries {
     
     var imageCountry: String?
     var nameCountry :String?
     var id: String?
     var selctedCase :Int?
-    
-  //  var Cities: [String: Any]?
-  //  var places: [String: Any]?
-    
 }
-
 
 extension Countries {
     
     static func getDataFromCountries(dict: [String: Any]) -> Countries {
-       
+        
         let countrie = Countries()
         
         countrie.imageCountry = dict["imageCountry"] as? String

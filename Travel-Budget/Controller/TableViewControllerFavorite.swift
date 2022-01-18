@@ -4,12 +4,14 @@
 //
 //  Created by Mac on 05/01/2022.
 //
-
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 import Kingfisher
+
+// Table View to view favorite for each User
 class TableViewControllerFavorite: UITableViewController {
+    
     var favarites = [FavoriteApi]()
     var countries = [Countries]()
     var selectedId : String?
@@ -17,10 +19,7 @@ class TableViewControllerFavorite: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//     deleteDocument()
-//        UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { countries in
-       
-            
+
         }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -33,9 +32,6 @@ class TableViewControllerFavorite: UITableViewController {
         }
     }
         
-        
-    
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,7 +78,7 @@ class TableViewControllerFavorite: UITableViewController {
             tableView.isEditing = true
         }
     }
-    
+// this function for editing to delete favoriteb
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             print("delated")

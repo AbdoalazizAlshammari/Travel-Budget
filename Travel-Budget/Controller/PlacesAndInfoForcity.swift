@@ -7,16 +7,12 @@
 
 import UIKit
 import FirebaseFirestore
-
+// this is view controller has collection View،name of city, image of city, and textview for des for city
 class PlacesAndInfoForcity: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
     
     var places : Places?
-    
     var selctedCity : Cities?
     var setSelctedCity : Cities?
-    
-    
-    
     var idCountries:String?
     var setIdCountries : String?
     

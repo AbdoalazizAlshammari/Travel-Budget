@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+//calss user with praperties
 class User {
     
     var name:String?
@@ -19,7 +20,7 @@ class User {
 extension User {
     
     static func getUser(dict: [String: Any]) -> User {
-       
+        
         let user = User()
         
         user.phone = dict["name"] as? String
@@ -29,26 +30,26 @@ extension User {
         return user
     }
     static func createUser(name:String,phone:String,email:String,favorite:[String]) -> [String: Any] {
-       
+        
         let newUser = ["name":phone,
                        "phone":name,
                        "email" :email,
                        "favorite" :favorite,
-                    ] as [String : Any]
+        ] as [String : Any]
         
         return newUser
     }
     static func addFavorite(favorite:[String]) -> [String: Any] {
-       
+        
         let user = [
-                       "favorite" :[favorite],
-                    ] as [String : Any]
+            "favorite" :[favorite],
+        ] as [String : Any]
         
         return user
     }
     
     static func getFavorite(dict: [String: Any]) -> User {
-       
+        
         let user = User()
         
         user.favorite = dict["favorite"] as? [String]

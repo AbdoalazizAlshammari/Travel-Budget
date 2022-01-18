@@ -8,14 +8,13 @@
 import UIKit
 import FirebaseFirestore
 import Firebase
-// table view cell for fav image and title outlets
+// Table View cell for fav image and title outlets
 class TableViewCellFavorite: UITableViewCell {
 
     @IBOutlet weak var countryImage: UIImageView!
     
     @IBOutlet weak var countryTitle: UILabel!
     
-
     
     override func awakeFromNib() {
         super.awakeFromNib()

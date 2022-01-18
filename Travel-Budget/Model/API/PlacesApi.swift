@@ -8,8 +8,8 @@
 import Foundation
 import FirebaseFirestore
 
+// to get places from firebase
 class PlacesApi {
-    
     
     static func getPlaces(city:Cities,idCountries:String,completion: @escaping (Places) -> Void) {
         
@@ -17,17 +17,13 @@ class PlacesApi {
         
         refCountries.document(idCountries).getDocument { document, error in
             if let document = document, document.exists {
-      
+                
                 guard let citysKey =  document.data()!["Cities"] as? [String : Any] else {return}
                 guard let cityId =  city.id else {return}
                 let objectCity = Cities.getDataFromCities(dict: citysKey["\(cityId)"] as! [String : Any])
                 let objectPlace = Places.getDataFromplaces(dict: objectCity.places!)
-               completion(objectPlace)
-                
-                
+                completion(objectPlace)
             }
         }
     }
-    
-    
 }

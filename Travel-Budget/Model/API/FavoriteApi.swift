@@ -7,7 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
-
+// add fav and save fav to firebase
 class FavoriteApi{
     static func addFavorite(uid:String,favorite:String) {
         
@@ -20,6 +20,7 @@ class FavoriteApi{
             }
         }
     }
+    // to get fav from firebase
     static func getFavorite(uid:String,completion: @escaping (Countries)-> Void) {
         
         
@@ -36,22 +37,15 @@ class FavoriteApi{
                 }
             }
         }
-                
-
     }
     
-    
+    // to delete fav from firebase
     static func deleteDocument(uid:String,favorite:String) {
         
         let refCountries = Firestore.firestore().collection("Countries")
         let refFavorite = Firestore.firestore().collection("Favorite")
         
         refFavorite.document(uid).collection("AllFA").document(favorite).delete()
-
-       }
-    
-    
-    
-    
-    
+        
+    }
 }

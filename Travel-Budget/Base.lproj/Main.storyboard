@@ -295,7 +295,7 @@
                                     <constraint firstAttribute="height" constant="222" id="CBz-Jo-ATb"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQi-HY-t8I">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQi-HY-t8I">
                                 <rect key="frame" x="20" y="596" width="381" height="217"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="systemTealColor"/>
@@ -317,11 +317,11 @@
                             <constraint firstAttribute="bottom" secondItem="7U8-oN-lNp" secondAttribute="bottom" id="a7k-QW-lrR"/>
                             <constraint firstItem="gxO-mL-KZ9" firstAttribute="top" secondItem="elh-9Y-gbd" secondAttribute="bottom" constant="8" id="dmp-2f-dGK"/>
                             <constraint firstItem="Eta-1s-aZq" firstAttribute="trailing" secondItem="elh-9Y-gbd" secondAttribute="trailing" constant="13" id="hDa-xl-dwH"/>
+                            <constraint firstItem="u8K-rt-NkU" firstAttribute="top" secondItem="gxO-mL-KZ9" secondAttribute="bottom" constant="8" symbolic="YES" id="hjM-ER-L4d"/>
                             <constraint firstItem="elh-9Y-gbd" firstAttribute="leading" secondItem="Eta-1s-aZq" secondAttribute="leading" constant="13" id="lhx-q0-5P3"/>
                             <constraint firstItem="7U8-oN-lNp" firstAttribute="leading" secondItem="Eta-1s-aZq" secondAttribute="leading" id="n43-ei-FQm"/>
                             <constraint firstItem="u8K-rt-NkU" firstAttribute="leading" secondItem="Eta-1s-aZq" secondAttribute="leading" constant="13" id="qSd-eJ-xFH"/>
                             <constraint firstAttribute="bottom" secondItem="yQi-HY-t8I" secondAttribute="bottom" constant="83" id="uSt-QZ-pBf"/>
-                            <constraint firstItem="u8K-rt-NkU" firstAttribute="top" secondItem="gxO-mL-KZ9" secondAttribute="bottom" constant="8" id="wX0-Lm-ba8"/>
                             <constraint firstItem="yQi-HY-t8I" firstAttribute="top" secondItem="u8K-rt-NkU" secondAttribute="bottom" constant="8" id="wzB-v9-X2x"/>
                         </constraints>
                     </view>
@@ -441,7 +441,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Afp-Ze-8yQ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="C60-WK-y4E" kind="relationship" relationship="viewControllers" id="wxb-cp-StJ"/>
@@ -473,13 +473,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gDW-7f-CPc">
-                                            <rect key="frame" x="25" y="0.0" width="349" height="255"/>
+                                            <rect key="frame" x="20" y="0.0" width="379" height="255"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="255" id="e5x-Ff-gsO"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgf-NC-3bd">
-                                            <rect key="frame" x="45" y="123" width="324" height="36"/>
+                                            <rect key="frame" x="20" y="123" width="374" height="36"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                             <color key="textColor" red="0.93230977680000005" green="0.93230977680000005" blue="0.93230977680000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -487,14 +487,14 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Jgf-NC-3bd" firstAttribute="centerY" secondItem="fI4-52-Ddv" secondAttribute="centerY" id="AfW-27-8iF"/>
-                                        <constraint firstItem="gDW-7f-CPc" firstAttribute="leading" secondItem="Jgf-NC-3bd" secondAttribute="leading" constant="-20" id="Fxo-th-Hbz"/>
+                                        <constraint firstItem="gDW-7f-CPc" firstAttribute="leading" secondItem="Jgf-NC-3bd" secondAttribute="leading" id="Fxo-th-Hbz"/>
                                         <constraint firstAttribute="bottom" secondItem="uiO-BG-zvK" secondAttribute="bottom" constant="27" id="GEt-Xr-dzK"/>
                                         <constraint firstItem="uiO-BG-zvK" firstAttribute="top" secondItem="fI4-52-Ddv" secondAttribute="top" id="GI3-JC-k1S"/>
                                         <constraint firstItem="gDW-7f-CPc" firstAttribute="trailing" secondItem="Jgf-NC-3bd" secondAttribute="trailing" constant="5" id="KXE-yW-p08"/>
                                         <constraint firstAttribute="trailing" secondItem="uiO-BG-zvK" secondAttribute="trailing" id="NLF-HK-Oie"/>
                                         <constraint firstItem="gDW-7f-CPc" firstAttribute="top" secondItem="fI4-52-Ddv" secondAttribute="top" id="NPQ-Om-xBZ"/>
                                         <constraint firstItem="gDW-7f-CPc" firstAttribute="bottom" secondItem="uiO-BG-zvK" secondAttribute="bottom" id="P3n-eJ-x92"/>
-                                        <constraint firstItem="gDW-7f-CPc" firstAttribute="leading" secondItem="fI4-52-Ddv" secondAttribute="leadingMargin" constant="5" id="bjj-NJ-grw"/>
+                                        <constraint firstItem="gDW-7f-CPc" firstAttribute="leading" secondItem="fI4-52-Ddv" secondAttribute="leadingMargin" id="bjj-NJ-grw"/>
                                         <constraint firstItem="Jgf-NC-3bd" firstAttribute="centerX" secondItem="fI4-52-Ddv" secondAttribute="centerX" id="c36-y2-Xb1"/>
                                         <constraint firstItem="uiO-BG-zvK" firstAttribute="leading" secondItem="fI4-52-Ddv" secondAttribute="leading" id="kWU-0b-n9h"/>
                                     </constraints>
@@ -654,10 +654,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" id="jOt-cU-fXk">
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" id="BAl-YS-jAy">
                                     <rect key="frame" x="0.0" y="-88" width="390" height="896"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CountriesCell" id="w42-v4-VaJ" customClass="CollectionViewCellCountries" customModule="Travel_Budget" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -728,6 +728,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="List of Countries" id="pSB-Cm-3ZJ"/>
                     <connections>
+                        <outlet property="activity" destination="BAl-YS-jAy" id="Gnw-h1-Gvp"/>
                         <outlet property="collectionCountries" destination="zil-SD-XjN" id="Hh4-hb-zj6"/>
                         <segue destination="42U-YV-waZ" kind="show" identifier="ToCities" id="P4u-Vh-6TA"/>
                     </connections>
@@ -938,7 +939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMi-ec-MfM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7746" y="82"/>
+            <point key="canvasLocation" x="7744.9275362318849" y="81.696428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="igp-Ay-6la">
@@ -960,7 +961,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xNB-i3-Fcv"/>
+        <segue reference="P4u-Vh-6TA"/>
         <segue reference="33T-Oo-kHV"/>
     </inferredMetricsTieBreakers>
     <resources>
