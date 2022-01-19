@@ -20,9 +20,7 @@ class SginInVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
-        
-        //        self.view.addGestureRecognizer(UIGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
-        //
+ 
     }
     
     override func viewDidAppear(_ animated: Bool) {

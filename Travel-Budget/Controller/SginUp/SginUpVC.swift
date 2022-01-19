@@ -20,6 +20,9 @@ class SginUpVC: UIViewController {
         
         UserApi.getUser(uid: Auth.auth().currentUser?.uid ?? "") { user in
             print(user.email ?? "email")
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+            self.view.addGestureRecognizer(tap)
         }
     }
     
@@ -33,13 +36,18 @@ class SginUpVC: UIViewController {
                 
                 if check {
                     
-                    self.displayAlert(withTitle: "thank you for signing up".localize, message: "weclome".localize, isSginup: true)
+                    self.displayAlert(withTitle: "Thank you for signing up".localize, message: "weclome".localize, isSginup: true)
                     print("Done saving in Database")
                 } else {
                     self.displayAlert(withTitle: "fail".localize, message: "", isSginup: false)
                 }
             }
         }
+    }
+    
+    @objc func dismissKeyboard() {
+        
+        view.endEditing(true)
     }
     
     
